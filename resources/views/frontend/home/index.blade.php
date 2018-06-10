@@ -33,7 +33,13 @@
                         @foreach($slider as $index=>$product)
                             <div class="item {{$index==0 ? 'active':''}}">
                                 <a href="{{route("frontend.product.index",["id"=>$product->id,"slug"=>$product->slug])}}">
-                                    <img src="https://loremflickr.com/640/400/product?random={{rand(1,100)}}" alt="..."></a>
+                                    <img src="
+                                    @if($product->detail->product_img ==null)
+                                        https://loremflickr.com/640/400/product?random={{rand(1,100)}}
+                                    @else
+                                    {{$product->detail->product_img}}
+                                    @endif
+                                        " alt="..."></a>
                                 <div class="carousel-caption">
                                     {{$product->tittle}}
                                 </div>
@@ -55,7 +61,13 @@
                     <div class="panel-heading">Günün Fırsatı</div>
                     <div class="panel-body">
                         <a href="{{route("frontend.product.index",["id"=>$gunun_firsati->id,"slug"=>$gunun_firsati->slug])}}">
-                            <img src="https://picsum.photos/260/300/?random" class="img-responsive">
+                            <img src="
+                             @if($product->detail->product_img ==null)
+                                https://loremflickr.com/260/300/product?random={{rand(1,100)}}
+                            @else
+                            {{$product->detail->product_img}}
+                            @endif
+                                " class="img-responsive">
                             {{$gunun_firsati->tittle}}
                         </a>
                     </div>
@@ -72,7 +84,13 @@
                         @foreach($one_cikan as $product)
                             <div class="col-md-3 product">
                                 <a href="{{route("frontend.product.index",["id"=>$product->id,"slug"=>$product->slug])}}"><img
-                                        src="https://loremflickr.com/260/300/discount?random={{rand(1,100)}}"></a>
+                                        src="
+                                         @if($product->detail->product_img ==null)
+                                            https://loremflickr.com/260/300/product?random={{rand(1,100)}}
+                                        @else
+                                        {{$product->detail->product_img}}
+                                        @endif
+                                            "></a>
                                 <p>
                                     <a href="{{route("frontend.product.index",["id"=>$product->id,"slug"=>$product->slug])}}">{{$product->tittle}}</a>
                                 </p>
@@ -92,7 +110,13 @@
                         @foreach($cok_satan as $product)
                             <div class="col-md-3 product">
                                 <a href="{{route("frontend.product.index",["id"=>$product->id,"slug"=>$product->slug])}}"><img
-                                        src="https://loremflickr.com/260/300/technology?random={{rand(1,100)}}"></a>
+                                        src="
+                                         @if($product->detail->product_img ==null)
+                                            https://loremflickr.com/260/300/product?random={{rand(1,100)}}
+                                        @else
+                                        {{$product->detail->product_img}}
+                                        @endif
+                                            "></a>
                                 <p>
                                     <a href="{{route("frontend.product.index",["id"=>$product->id,"slug"=>$product->slug])}}">{{$product->tittle}}</a>
                                 </p>
@@ -111,7 +135,13 @@
                         @foreach($indirimli as $product)
                             <div class="col-md-3 product">
                                 <a href="{{route("frontend.product.index",["id"=>$product->id,"slug"=>$product->slug])}}"><img
-                                        src="https://loremflickr.com/260/300/car?random={{rand(1,100)}}"></a>
+                                        src="
+                                         @if($product->detail->product_img ==null)
+                                            https://loremflickr.com/260/300/car?random={{rand(1,100)}}
+                                        @else
+                                        {{$product->detail->product_img}}
+                                        @endif
+                                      "></a>
                                 <p>
                                     <a href="{{route("frontend.product.index",["id"=>$product->id,"slug"=>$product->slug])}}">{{$product->tittle}}</a>
                                 </p>

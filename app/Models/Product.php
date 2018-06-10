@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Product extends Model
 {
     use SoftDeletes;
-    protected $table = "products";
+
     protected $guarded = [];
 
     public function category()
@@ -19,7 +19,7 @@ class Product extends Model
 
     public function detail()
     {
-        return $this->hasOne("App\Models\ProductDetail");
+        return $this->hasOne("App\Models\ProductDetail")->withDefault();
 
     }
 

@@ -21,6 +21,7 @@ class CreateProductDetailsTable extends Migration
             $table->boolean("one_cikan")->default(0);
             $table->boolean("cok_satan")->default(0);
             $table->boolean("indirimli")->default(0);
+            $table->string("product_img",250);
             $table->timestamps();
 
             $table->foreign("product_id")->references("id")->on("products")->onDelete("cascade");

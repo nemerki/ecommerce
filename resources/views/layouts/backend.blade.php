@@ -3,6 +3,7 @@
 <head>
     <title>@yield('tittle',config('app.name')." | Admin")</title>
     <meta charset="UTF-8"/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="{{asset("assets/backend/css/bootstrap.min.css")}}"/>
     <link rel="stylesheet" href="{{asset("assets/backend/css/bootstrap-responsive.min.css")}}"/>
@@ -12,6 +13,7 @@
     <link href="{{asset("assets/backend/font-awesome/css/font-awesome.css")}}" rel="stylesheet"/>
     <link rel="stylesheet" href="{{asset("assets/backend/css/jquery.gritter.css")}}"/>
     <link rel="stylesheet" href="{{asset("assets/backend/css/admin.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/backend/css/uniform.css")}}"/>
     @stack("customCss")
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 </head>
@@ -55,7 +57,6 @@
 </div>
 
 <!--end-Footer-part-->
-
 <script src="{{asset("assets/backend/js/excanvas.min.js")}}"></script>
 <script src="{{asset("assets/backend/js/jquery.min.js")}}"></script>
 <script src="{{asset("assets/backend/js/jquery.ui.custom.js")}}"></script>
@@ -70,11 +71,14 @@
 {{--<script src="{{asset("assets/backend/js/jquery.validate.js")}}"></script>--}}
 {{--<script src="{{asset("assets/backend/js/matrix.form_validation.js")}}"></script>--}}
 <script src="{{asset("assets/backend/js/jquery.uniform.js")}}"></script>
-<script src="{{asset("assets/backend/js/select2.min.js")}}"></script>
 {{--<script src="{{asset("assets/backend/js/jquery.dataTables.min.js")}}"></script>--}}
 {{--<script src="{{asset("assets/backend/js/matrix.tables.js")}}"></script>--}}
 <script src="https://unpkg.com/sweetalert2@7.21.0/dist/sweetalert2.all.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
 @stack("customJs")
 
 </body>

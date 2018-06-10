@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'active', 'activation_key',
+        'name', 'email', 'password', 'active', 'activation_key','yetki'
     ];
 
     /**
@@ -31,6 +31,6 @@ class User extends Authenticatable
     ];
 
     public function detail(){
-        return $this->hasOne('App\Models\UserDetail');
+        return $this->hasOne('App\Models\UserDetail')->withDefault();
     }
 }

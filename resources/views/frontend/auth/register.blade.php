@@ -18,7 +18,7 @@
                             </div>
                         @endif
                         <form class="form-horizontal" role="form" method="POST"
-                              action="{{ route('frontend.user.signup') }}">
+                              action="{{ route('frontend.auth.signup') }}">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="name" class="col-md-4 control-label">Ad Soyad</label>

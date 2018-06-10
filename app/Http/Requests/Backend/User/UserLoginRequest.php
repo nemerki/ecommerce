@@ -35,7 +35,7 @@ class UserLoginRequest extends FormRequest
         return [
             "email.required" => "Bu alan gerekli",
             "email.email" => "Lütfen geçerli bir email adresi giriniz",
-            "email.min" => "En az :min karakter olmalıdır",
+
 
             "password.required" => "Bu alan gerekli",
 
