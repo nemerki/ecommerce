@@ -54,5 +54,12 @@ Route::group(["prefix" => "admin", "as" => "backend", "namespace" => "Backend"/*
             Route::post("/store", "ProductController@store")->name(".store");
         });
 
+        Route::group(["prefix" => "siparis", "as" => ".order", "namespace" => "Order"], function () {
+            Route::get("/", "OrderController@index")->name(".index");
+            Route::get("/detay/{id}", "OrderController@detail")->name(".detail");
+            Route::post("/update/{id}", "OrderController@update")->name(".update");
+
+        });
+
     });
 });

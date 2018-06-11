@@ -42,5 +42,9 @@ class Basket extends Model
         return DB::table('basket_products')->where('basket_id', $this->id)->sum('qty');
     }
 
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 
 }

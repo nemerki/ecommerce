@@ -3,11 +3,9 @@
 @section("content")
     <div class="widget-box">
         <div class="widget-title"><span class="icon"><i class="icon-th"></i></span>
-            <h5>Tüm Yazılar </h5>
+            <h5>Tüm Siparişler </h5>
 
-            <div style="padding-top: 3px; padding-right: 11px;" class="text-right">
-                <a href="{{route("backend.product.create")}}" class="btn btn-success ">Ekle</a>
-            </div>
+
         </div>
 
         <div class="widget-content nopadding">
@@ -27,21 +25,21 @@
                 <tbody>
 
                 @php($i=0)
-                @foreach($products as $product)
+                @foreach($orders as $order)
                     @php($i++)
                     <tr class="gradeX">
                         <td>{{$i}}</td>
-                        <td>{{$product->tittle}}</td>
-                        <td>{{$product->price}}</td>
+                        <td>SP-{{$order->id}}</td>
+                        <td>{{$order->basket->user->name}}</td>
+                        <td>{{$order->amount*((100+config('cart.tax'))/100)}}</td>
+                        <td>{{$order->status}}</td>
+                        <td>{{date("d-M-Y",strtotime($order->created_at))}}</td>
                         <td class="center">
 
-                            <a href="{{route("backend.product.edit",["id"=>$product->id])}}"
-                               class="btb btn-primary  btn-mini categoryEdit">Düzenle</a>
+                            <a href="{{route("backend.order.detail",["id"=>$order->id])}}"
+                               class="btb btn-primary  btn-mini categoryEdit">Detay</a>
                         </td>
-                        <td class="center">
-                            <button data-id="{{$product->id}}" class="btn btn-danger btn-mini productDelete">Sil
-                            </button>
-                        </td>
+
                     </tr>
                 @endforeach
                 </tbody>

@@ -9,7 +9,9 @@
         <li><a href="{{route("backend.user.index")}}"><i class="icon icon-user"></i><span>Kullanıcılar</span></a>
         </li>
         <li><a href="{{route("backend.category.index")}}"><i class="icon icon-tasks"></i><span>Kategoriler</span></a>
-        </li>  <li><a href="{{route("backend.product.index")}}"><i class="icon icon-shopping-cart"></i><span>Ürünler</span></a>
+        </li>
+        <li><a href="{{route("backend.product.index")}}"><i class="icon icon-shopping-cart"></i><span>Ürünler</span></a>
+        </li> <li><a href="{{route("backend.order.index")}}"><i class="icon icon-print"></i><span>Siparişler</span></a>
         </li>
 
 
